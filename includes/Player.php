@@ -18,7 +18,12 @@ class Player extends Database
 
         $sql = "INSERT INTO {$this->tableName} (".implode(',', $fileds).") VALUES(".implode(',', $placholders) .")";
         $stmt = $this->conn->prepare($sql);
-        
+
+        try {
+            //code...
+        } catch(PDOException $e){
+            
+        }
     }
     
 }
