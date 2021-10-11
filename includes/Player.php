@@ -20,9 +20,16 @@ class Player extends Database
         $stmt = $this->conn->prepare($sql);
 
         try {
-            //code...
+            $this->conn->beginTransaction();
+            $stmt->execute($data);
+            $this->conn->commit();
+            $lastInsertedId = $this->conn->lastInsertId();
+            return $lastInsertedId;
         } catch(PDOException $e){
-            
+            echo "Error: ". $e->getMessage();
+            $this->conn->rollback();
+
+
         }
     }
     
