@@ -6,6 +6,13 @@ class Player extends Database
     //table name
     protected $tableName = 'players';
 
+    /** 
+     *function is used to add record
+     *@param array $data
+     *@return int $lastInsertedId
+
+    **/
+
     public function add($data) {
 
         if (!empty($data)){
@@ -33,6 +40,14 @@ class Player extends Database
         }
     }
 
+    /** 
+     *function is used to get records
+     *@param int $stmt
+     *@param int @limit
+     *@return array $results
+
+    **/
+
     public function getRows($start = 0, $limit = 4) {
         $sql= "SELECT * FROM {$this->tableName} ORDER BY id DESC LIMIT {$start}, {$limit}";
         $stmt = $this->conn->prepare($sql);
@@ -45,6 +60,32 @@ class Player extends Database
         }
 
         return $results;
+    }
+
+    /** 
+     *function is used to get single record based on the column value
+     *@param string $fileds
+     *@param any $value
+     *@return array $results
+
+    **/
+
+    public function getRow($field,$value){
+
+        $sql = "SELECT * FROM {$this->tableName} WHERE {$field}=:{$field}";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([":{$field}" => $value]);
+        if($stmt->rowCount()>0){
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        } else {
+            $result = [];
+        }
+
+        return $result;
+    }
+
+    public function uploadPhoto($file){
+        
     }
     
 }
