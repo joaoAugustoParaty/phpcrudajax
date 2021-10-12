@@ -45,7 +45,7 @@ class Player extends Database
 
     **/
 
-    public function getRows($start = 0, $limit = 4) {
+    public function getRows($start = 0, $limit = 4) /*MUDAR CASO TENHA MAIS ITENS*/ {
         $sql= "SELECT * FROM {$this->tableName} ORDER BY id DESC LIMIT {$start}, {$limit}";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();

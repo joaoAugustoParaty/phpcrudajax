@@ -1,3 +1,24 @@
+function getplayers(){
+    $.ajax({
+    url:"/phpcrudajax/ajax.php",
+    type: "GET",
+    dataType:"json",
+    data: { page: page, action: "getusers" },
+    beforeSend: function(){
+        $("#overlay").fadeIn();
+
+    },
+    success:function(players){
+     if(players){
+         console.log(players);
+     }
+    },
+    error: function(){
+     console.log('something went wrong');
+    },
+    });
+}
+
 
 $(document).ready(function(){
     // add/edit user

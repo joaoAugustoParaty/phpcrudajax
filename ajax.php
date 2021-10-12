@@ -45,3 +45,10 @@ if ($action == 'adduser' && !empty($_POST)) {
     }
 
 }
+
+if($action =="getusers") {
+    $page = (!empty($_GET['page'])) ? $_GET['page'] : 1;
+    $limit = 4; /*MUDAR CASO TENHA MAIS ITENS*/
+    $start = ($page-1) * $limit;
+    $players = $obj->getRows($start, $limit);
+}
