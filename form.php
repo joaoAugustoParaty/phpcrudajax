@@ -56,7 +56,7 @@
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-success" id="addButton">Submit</button>
         <input type="hidden" name="action" value="adduser">
-        <input type="hidden" name="userid" id="userid" value="adduser">
+        <input type="hidden" name="userid" id="userid" value="">
       </div>
       </form>
     </div>
