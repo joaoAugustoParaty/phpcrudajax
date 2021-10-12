@@ -1,9 +1,10 @@
 function getplayers(){
+    var pageno = $('#currentpage').val();
     $.ajax({
     url:"/phpcrudajax/ajax.php",
     type: "GET",
     dataType:"json",
-    data: { page: page, action: "getusers" },
+    data: { page: pageno, action: "getusers" },
     beforeSend: function(){
         $("#overlay").fadeIn();
 
@@ -48,4 +49,7 @@ $(document).ready(function(){
             }
         });
     });
+
+    //Load players
+    getplayers();
 });
