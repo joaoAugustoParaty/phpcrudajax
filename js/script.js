@@ -9,6 +9,16 @@ $(document).ready(function(){
             dataType:"json",
             data: new FormData(this),
             processData: false,
+            contentType:false,
+            beforeSend: function(){
+                console.log("wait...");
+            },
+            success:function(response){
+                console.log(response);
+            },
+            error: function(){
+                console.log("Oops! Algo de errado aconteceu!");
+            }
         });
     });
 });
