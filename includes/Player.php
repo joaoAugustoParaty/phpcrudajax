@@ -15,28 +15,25 @@ class Player extends Database
 
     public function add($data) {
 
-        if (!empty($data)){
+        if (!empty($data)) {
             $fileds = $placholders = [];
-            foreach ($data as $field => $value){
+            foreach ($data as $field => $value) {
                 $fileds[] = $field;
                 $placholders[] = ":{$field}";
             }
         }
 
-        $sql = "INSERT INTO {$this->tableName} (".implode(',', $fileds).") VALUES(".implode(',', $placholders) .")";
+        $sql = "INSERT INTO {$this->tableName} (" . implode(',', $fileds) . ") VALUES (" . implode(',', $placholders) . ")";
         $stmt = $this->conn->prepare($sql);
-
         try {
             $this->conn->beginTransaction();
             $stmt->execute($data);
-            $this->conn->commit();
             $lastInsertedId = $this->conn->lastInsertId();
+            $this->conn->commit();
             return $lastInsertedId;
-        } catch(PDOException $e){
-            echo "Error: ". $e->getMessage();
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
             $this->conn->rollback();
-
-
         }
     }
 
@@ -72,10 +69,10 @@ class Player extends Database
 
     public function getRow($field,$value){
 
-        $sql = "SELECT * FROM {$this->tableName} WHERE {$field}=:{$field}";
+        echo $sql = "SELECT * FROM {$this->tableName} WHERE {$field}=:{$field}";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([":{$field}" => $value]);
-        if($stmt->rowCount()>0){
+        if($stmt->rowCount() > 0){
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
         } else {
             $result = [];

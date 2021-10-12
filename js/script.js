@@ -1,7 +1,7 @@
 $(document).ready(function(){
     // add/edit user
 
-    $(document).on("submit", "addform", function(event){
+    $(document).on("submit", "#addform", function(event){
         event.preventDefault();
         $.ajax({
             url:"/phpcrudajax/ajax.php",
@@ -11,13 +11,18 @@ $(document).ready(function(){
             processData: false,
             contentType:false,
             beforeSend: function(){
-                console.log("wait...");
+                $('#overlay').fadeIn();
             },
             success:function(response){
                 console.log(response);
+                if(response) {
+                    $("#userModal").modal("hide");
+                    $("#addform")[0].reset();
+                    $("#overlay").fadeOut();
+                }
             },
             error: function(){
-                console.log("Oops! Algo de errado aconteceu!");
+                //console.log("Oops! Algo de errado aconteceu!");
             }
         });
     });

@@ -3,7 +3,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add/Edit User <i class="fa fa-user-circle-o" aria-hidden="true"></i></h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add/Editar usuário <i class="fa fa-user-circle-o" aria-hidden="true"></i></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -34,7 +34,7 @@
             <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone" aria-hidden="true"></i></span>
             </div>
-            <input type="phone" class="form-control" id="phone" name="phone" required="required" maxLength="10" minLength="10">
+            <input type="phone" class="form-control" id="phone" name="phone" required="required" maxLength="11" minLength="10">
           </div>
           </div>
           <div class="form-group">
@@ -53,8 +53,8 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-success" id="addButton">Submit</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-success" id="addButton">Enviar</button>
         <input type="hidden" name="action" value="adduser">
         <input type="hidden" name="userid" id="userid" value="">
       </div>

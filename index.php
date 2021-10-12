@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Ajax CRUD</title>
+    <title>Formulario</title>
     <!-- CSS only -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -12,7 +12,7 @@
 <body>
 <div class="container">
 <div class="alert alert alert-primary" role="alert">
-  <h4 class="text-primary text-center">PHP CRUD Application Using jQuery Ajax</h4>
+  <h4 class="text-primary text-center">Secretaria de Agricultura e Pesca</h4>
 </div>
 
 <!-- Codigo PHP -->
@@ -26,14 +26,14 @@ include_once 'profile.php';
 
 <div class="row mb-3">
 <div class="col-3">
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#userModal">Add New <i class="fa fa-user-circle-o" ></i></button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#userModal">Adicionar <i class="fa fa-user-circle-o" ></i></button>
 </div>
 <div class="col-9">
 <div class="input-group input-group-lg">
 <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
   </div>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Search..." id="searchinput">
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Procurar..." id="searchinput">
   
 </div>
 </div>
@@ -46,11 +46,11 @@ include_once 'playerstable.php';
 
 <nav id="pagination">
     <ul class="pagination justify-content-center">
-        <li class="page-item disabled"><a class="page-link" href="#" >Previous</a></li>
+        <li class="page-item disabled"><a class="page-link" href="#" >Anterior</a></li>
         <li class="page-item active"><a class="page-link" href="#" >1</a></li>
         <li class="page-item"><a class="page-link" href="#" >2</a></li>
         <li class="page-item"><a class="page-link" href="#" >3</a></li>
-        <li class="page-item"><a class="page-link" href="#" >Next</a></li>
+        <li class="page-item"><a class="page-link" href="#" >Próximo</a></li>
     </ul>
 </nav>
 <input type="hidden" name="currentpage" id="currentpage" value="1">
@@ -67,7 +67,7 @@ include_once 'playerstable.php';
 <div id="overlay" style="display:none;">
     <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;"></div>
     <br/>
-    Loading...
+    Carregando...
 </div>
 </body>
 <script>
