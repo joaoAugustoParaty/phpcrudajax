@@ -69,7 +69,7 @@ class Player extends Database
 
     public function getRow($field,$value){
 
-        echo $sql = "SELECT * FROM {$this->tableName} WHERE {$field}=:{$field}";
+        $sql = "SELECT * FROM {$this->tableName} WHERE {$field}=:{$field}";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([":{$field}" => $value]);
         if($stmt->rowCount() > 0){

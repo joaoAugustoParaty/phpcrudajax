@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     // add/edit user
 
@@ -11,7 +12,7 @@ $(document).ready(function(){
             processData: false,
             contentType:false,
             beforeSend: function(){
-                $('#overlay').fadeIn();
+                $("#overlay").fadeIn();
             },
             success:function(response){
                 console.log(response);
