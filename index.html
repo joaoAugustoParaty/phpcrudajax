@@ -13,14 +13,14 @@
 <body>
 <div class="container">
 <div class="alert alert alert-primary" role="alert">
-  <h4 class="text-primary text-center">PHP CRUD Application Using jQuery Ajax</h4>
+  <h4 class="text-primary text-center">Secretaria de Agricultura e Pesca</h4>
 </div>
 <!-- add/edit form modal -->
 <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add/Edit User <i class="fa fa-user-circle-o" aria-hidden="true"></i></h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add/Editar <i class="fa fa-user-circle-o" aria-hidden="true"></i></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -28,7 +28,7 @@
       <form id="addform" method="POST" enctype="multipart/form-data">
       <div class="modal-body">
             <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Name:</label>
+            <label for="recipient-name" class="col-form-label">Nome:</label>
             <div class="input-group mb-3">
             <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="message-text" class="col-form-label">Email:</label>
+            <label for="message-text" class="col-form-label">E-mail:</label>
             <div class="input-group mb-3">
             <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
@@ -46,23 +46,23 @@
           </div>
           </div>
           <div class="form-group">
-            <label for="message-text" class="col-form-label">Phone:</label>
+            <label for="message-text" class="col-form-label">Telefone:</label>
             <div class="input-group mb-3">
             <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone" aria-hidden="true"></i></span>
             </div>
-            <input type="phone" class="form-control" id="phone" name="phone" required="required" maxLength="10" minLength="10">
+            <input type="phone" class="form-control" id="phone" name="phone" required="required" maxLength="11" minLength="10">
           </div>
           </div>
           <div class="form-group">
-          <label for="message-text" class="col-form-label">Photo:</label>
+          <label for="message-text" class="col-form-label">Foto:</label>
             <div class="input-group mb-3">
             <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroupFileAddon01"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
             </div>
             <div class="custom-file">
             <input type="file" class="custom-file-input" name="photo" id="userphoto" >
-            <label class="custom-file-label" for="userphoto">Choose file</label>
+            <label class="custom-file-label" for="userphoto">Escolha uma foto</label>
             </div>
             </div>
 
@@ -70,8 +70,8 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-success" id="addButton">Submit</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-success" id="addButton">Enviar</button>
         <input type="hidden" name="action" value="adduser">
         <input type="hidden" name="userid" id="userid" value="adduser">
       </div>
@@ -85,7 +85,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Profile <i class="fa fa-user-circle-o" aria-hidden="true"></i></h5>
+        <h5 class="modal-title" id="exampleModalLabel">Perfil <i class="fa fa-user-circle-o" aria-hidden="true"></i></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -94,14 +94,14 @@
       <div class="container" id="profile"> 
         <div class="row">
             <div class="col-sm-6 col-md-4">
-                <img src="http://placehold.it/100x100" alt="" class="rounded responsive" />
+                <img src="uploads/4952253089b323f7bdb85ec685c081e2.jpg" alt="" class="rounded responsive" />
             </div>
             <div class="col-sm-6 col-md-8">
-                <h4 class="text-primary">Virat Kohli</h4>
+                <h4 class="text-primary">João</h4>
                 <p class="text-secondary">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i> email@example.com
+                <i class="fa fa-envelope-o" aria-hidden="true"></i> joaodrow@gmail.com
                 <br />
-                <i class="fa fa-phone" aria-hidden="true"></i> xxxxxxxxxx
+                <i class="fa fa-phone" aria-hidden="true"></i> 24998730714
                 </p>
                 <!-- Split button -->
             </div>
@@ -110,7 +110,7 @@
     </div>   
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
       </div>
       </form>
     </div>
@@ -120,14 +120,14 @@
 
 <div class="row mb-3">
 <div class="col-3">
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#userModal">Add New <i class="fa fa-user-circle-o" ></i></button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#userModal">Adicionar novo <i class="fa fa-user-circle-o" ></i></button>
 </div>
 <div class="col-9">
 <div class="input-group input-group-lg">
 <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i></span>
   </div>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Search..." id="searchinput">
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Procurar..." id="searchinput">
   
 </div>
 </div>
@@ -137,17 +137,17 @@
   <thead>
     <tr>
       <th scope="col"></th>
-      <th scope="col">Name</th>
+      <th scope="col">Nome</th>
       <th scope="col">Email</th>
-      <th scope="col">Phone</th>
+      <th scope="col">Telefone</th>
       <th scope="col"></th>
     </tr>
   </thead>
   <tbody><tr>
-    <td class="align-middle"><img src="http://placehold.it/80x80" class="img-thumbnail rounded float-left"></td>
-    <td class="align-middle">Virat Kohli</td>
-    <td class="align-middle">virat@example.com</td>
-    <td class="align-middle">xxxxxxxxxx</td>
+    <td class="align-middle"><img src="uploads/4952253089b323f7bdb85ec685c081e2.jpg" class="img-thumbnail rounded float-left"></td>
+    <td class="align-middle">João</td>
+    <td class="align-middle">joaodrow@gmail.com</td>
+    <td class="align-middle">24998730714</td>
     <td class="align-middle">
     <a href="#" class="btn btn-success mr-3 profile" data-toggle="modal" data-target="#userViewModal" title="Prfile"><i class="fa fa-address-card-o" aria-hidden="true"></i></a>
     <a href="#" class="btn btn-warning mr-3 edituser" data-toggle="modal" data-target="#userModal" title="Edit"><i class="fa fa-pencil-square-o fa-lg"></i></a>
@@ -155,8 +155,8 @@
     </td>
     </tr><tr>
     <td class="align-middle"><img src="http://placehold.it/80x80" class="img-thumbnail rounded float-left"></td>
-    <td class="align-middle">MS Dhoni</td>
-    <td class="align-middle">dhoni@example.com</td>
+    <td class="align-middle">Paulo</td>
+    <td class="align-middle">paulo@example.com</td>
     <td class="align-middle">xxxxxxxxxx</td>
     <td class="align-middle">
     <a href="#" class="btn btn-success mr-3 profile" data-toggle="modal" data-target="#userViewModal" title="Prfile"><i class="fa fa-address-card-o" aria-hidden="true"></i></a>
@@ -165,8 +165,8 @@
     </td>
     </tr><tr id="row-9">
     <td class="align-middle"><img src="http://placehold.it/80x80" class="img-thumbnail rounded float-left"></td>
-    <td class="align-middle">Sachin Tendulkar</td>
-    <td class="align-middle">sachin@example.com</td>
+    <td class="align-middle">José</td>
+    <td class="align-middle">jose@example.com</td>
     <td class="align-middle">xxxxxxxxxx</td>
     <td class="align-middle">
     <a href="#" class="btn btn-success mr-3 profile" data-toggle="modal" data-target="#userViewModal" title="Prfile"><i class="fa fa-address-card-o" aria-hidden="true"></i></a>
@@ -175,8 +175,8 @@
     </td>
     </tr><tr>
     <td class="align-middle"><img src="http://placehold.it/80x80" class="img-thumbnail rounded float-left"></td>
-    <td class="align-middle">Rohit Sharma</td>
-    <td class="align-middle">rohit@example.com</td>
+    <td class="align-middle">Marcio</td>
+    <td class="align-middle">maria@example.com</td>
     <td class="align-middle">xxxxxxxxxx</td>
     <td class="align-middle">
     <a href="#" class="btn btn-success mr-3 profile" data-toggle="modal" data-target="#userViewModal" title="Prfile"><i class="fa fa-address-card-o" aria-hidden="true"></i></a>
@@ -187,11 +187,11 @@
 </table><!-- table -->
 <nav id="pagination">
     <ul class="pagination justify-content-center">
-        <li class="page-item disabled"><a class="page-link" href="#" >Previous</a></li>
+        <li class="page-item disabled"><a class="page-link" href="#" >Anterior</a></li>
         <li class="page-item active"><a class="page-link" href="#" >1</a></li>
         <li class="page-item"><a class="page-link" href="#" >2</a></li>
         <li class="page-item"><a class="page-link" href="#" >3</a></li>
-        <li class="page-item"><a class="page-link" href="#" >Next</a></li>
+        <li class="page-item"><a class="page-link" href="#" >Próximo</a></li>
     </ul>
 </nav>
 <input type="hidden" name="currentpage" id="currentpage" value="1">
@@ -207,7 +207,7 @@
 <div id="overlay" style="display:none;">
     <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;"></div>
     <br/>
-    Loading...
+    Carregando...
 </div>
 </body>
 <script>
